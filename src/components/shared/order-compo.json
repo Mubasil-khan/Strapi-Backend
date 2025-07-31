@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_order_compos",
+  "info": {
+    "displayName": "OrderCompo",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "user_carts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-cart.user-cart"
+    },
+    "Qty": {
+      "type": "integer"
+    },
+    "Price": {
+      "type": "integer"
+    },
+    "TotalPrice": {
+      "type": "decimal"
+    },
+    "OverAllTotal": {
+      "type": "biginteger"
+    }
+  },
+  "config": {}
+}
