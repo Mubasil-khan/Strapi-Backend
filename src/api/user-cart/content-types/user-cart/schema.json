@@ -11,11 +11,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "product": {
+    "products": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::product.product",
-      "inversedBy": "user_carts"
+      "mappedBy": "user_cart"
     },
     "users_permissions_user": {
       "type": "relation",

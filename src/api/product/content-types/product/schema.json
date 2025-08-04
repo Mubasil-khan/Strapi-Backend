@@ -38,11 +38,11 @@
     "name": {
       "type": "string"
     },
-    "user_carts": {
+    "user_cart": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::user-cart.user-cart",
-      "mappedBy": "product"
+      "inversedBy": "products"
     }
   }
 }
