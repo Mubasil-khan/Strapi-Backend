@@ -641,8 +641,8 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    user_cart: Schema.Attribute.Relation<
-      'manyToOne',
+    user_carts: Schema.Attribute.Relation<
+      'manyToMany',
       'api::user-cart.user-cart'
     >;
   };
@@ -698,11 +698,7 @@ export interface ApiUserCartUserCart extends Struct.CollectionTypeSchema {
       'api::user-cart.user-cart'
     > &
       Schema.Attribute.Private;
-    ProductId: Schema.Attribute.BigInteger;
-    ProductImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
+    products: Schema.Attribute.Relation<'manyToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
