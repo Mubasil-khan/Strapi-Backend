@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_carts",
+  "info": {
+    "displayName": "Cart"
+  },
+  "options": {},
+  "attributes": {
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    },
+    "Qty": {
+      "type": "biginteger"
+    }
+  },
+  "config": {}
+}
