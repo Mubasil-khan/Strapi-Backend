@@ -29,14 +29,10 @@ export interface SharedOrderCompo extends Struct.ComponentSchema {
     icon: 'archive';
   };
   attributes: {
-    OverAllTotal: Schema.Attribute.BigInteger;
     Price: Schema.Attribute.Integer;
+    product_name: Schema.Attribute.Relation<'oneToOne', 'api::product.product'>;
     Qty: Schema.Attribute.Integer;
     TotalPrice: Schema.Attribute.Decimal;
-    user_carts: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::user-cart.user-cart'
-    >;
   };
 }
 

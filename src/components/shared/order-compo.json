@@ -6,10 +6,10 @@
   },
   "options": {},
   "attributes": {
-    "user_carts": {
+    "product_name": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::user-cart.user-cart"
+      "relation": "oneToOne",
+      "target": "api::product.product"
     },
     "Qty": {
       "type": "integer"
@@ -19,9 +19,6 @@
     },
     "TotalPrice": {
       "type": "decimal"
-    },
-    "OverAllTotal": {
-      "type": "biginteger"
     }
   },
   "config": {}

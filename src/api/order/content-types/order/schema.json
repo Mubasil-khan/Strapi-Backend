@@ -51,6 +51,9 @@
       "component": "shared.order-compo",
       "repeatable": true,
       "required": false
+    },
+    "OverAllTotal": {
+      "type": "biginteger"
     }
   }
 }
